@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml" xmlns:h = "http://java.sun.com/jsf/html" xmlns:f = "http://java.sun.com/jsf/core">
+<h:head>
+	<title>Atividade 8 da aula 12</title>
+	<h:outputStylesheet library="css" name="styles.css" />
+</h:head>
+<h:body>
+	<h2>Lista de alunos cadastrados</h2>
+	<br />
+	<h:form>
+		<h:dataTable id="listaAlunos" value="#{alunoController.alunos}" var="aluno">
+			<h:column>
+				<f:facet name = "header">Matrícula</f:facet>
+				#{aluno.matricula}
+			</h:column>
+			<h:column>
+				<f:facet name = "header">Nome</f:facet>
+				#{aluno.nome}
+			</h:column>
+			<h:column>
+				<f:facet name = "header">RA</f:facet>
+				#{aluno.ra}
+			</h:column>
+		</h:dataTable>
+		<h:commandLink value="Voltar" action="index"/>
+	</h:form>
+</h:body>
+</html>
